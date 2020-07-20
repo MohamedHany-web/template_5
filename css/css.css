@@ -1,0 +1,461 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Open Sans', sans-serif;
+  height: 3000px;
+}
+.input-btn{
+  background-color: #19af83;
+  border-radius: 28px;
+  padding: 17px;
+  width: 135px;
+  border: 0;
+  border: 1px solid #19af83;
+  color: #fff;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: background-color 0.5s ease-in-out , color 0.5s ease-in-out;
+}
+.input-btn:focus{
+  outline:none;
+}
+.input-btn:hover{
+  background-color: #fff;
+  color: #19af83;
+}
+.list-unstyled{
+  list-style: none;
+}
+.container{
+  width: 85%;
+  margin:auto;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+.header{
+  display: flex;
+  padding: 0 20px 0 120px;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.header .nav {
+  padding: 24px 0px 0;
+}
+.header .nav ul li{
+  display: inline-block;
+}
+.header .nav ul li a{
+  padding:5px;
+  margin-right: 6px;
+}
+.header-logo{
+  flex-grow: 1;
+  line-height: 106px;
+}
+.header-logo img{
+  width:80px;
+}
+.home{
+  background-image: url("../images/banner.jpg");
+  height: 630px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.home-overlay{
+  color: #fff;
+  position: absolute;
+  top: 150px;
+  left: 110px;
+  padding: 10px;
+}
+.home-overlay h1{
+  font-weight: normal;
+  font-size: 31px;
+}
+.home-overlay p{
+  margin: 25px 0;
+  line-height: 27px;
+  font-size: 18px;
+}
+.home-overlay input{
+  background-color: #19af83;
+  border-radius: 28px;
+  padding: 17px;
+  width: 135px;
+  color: #fff;
+  margin-right: 15px;
+}
+.skill{
+  text-align: center;
+  margin: 80px 0;
+}
+.skill > p{
+  margin: 40px 0;
+}
+.skill-items{
+  display: flex;
+}
+.grow{
+  flex-grow: 1;
+}
+.skill-item {
+  height: 450px;
+  margin-right: 3%;
+  background-color: #00a498;
+  cursor: pointer;
+  padding: 100px 15px 15px 15px;
+  position: relative;
+  color: white;
+}
+.last{
+  margin-right: 0;
+}
+.back{
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.skill-item:hover .back{
+  opacity: 1;
+  visibility: visible;
+}
+.skill-item:hover .front{
+  opacity: 0;
+  visibility:hidden;
+}
+.skill-item:hover .ar{
+  opacity: 1;
+    left: 0;
+    transition: all 0.3s;
+}
+.skill-item p{
+  margin: 15px 0;
+}
+.lab{
+  display: flex;
+  height: 416px;
+  width: 100%;
+}
+.lab .pic{
+  background-image: url(../images/improve-business.jpg);
+  height: 100%;
+    /* flex-grow: 1; */
+    width: 100%;
+}
+.lab .pic-disc{
+  padding: 35px;
+  max-width: 680px;
+  background-color: #efefef;
+}
+.lab .pic-disc h2{
+  margin-bottom: 30px;
+  color: #333;
+}
+.lab .pic-disc p{
+  font: 400 16px/155% 'Open Sans', sans-serif;
+  color: #333;
+  margin: 0 0 30px;
+  line-height: 1.7rem;
+}
+.work .container{
+  text-align: center;
+}
+.work{
+  margin: 40px 0 0 ;
+}
+.work .container p{
+  margin: 30px 0 50px;
+}
+.work .container ul{
+  margin-bottom: 50px;
+}
+.work .container ul li {
+  display: inline-block;
+}
+.work .container ul li a{
+  padding: 10px ;
+  margin-right: 10px;
+}
+.work .container ul li a:last-child{
+  margin: 0;
+}
+.work .container ul li .active{
+  color: #19af83;
+}
+.work .container ul li a{
+  color: #000;
+  transition: color 0.4s ease-in-out;
+}
+.work .container ul li a:hover{
+  color: #19af83;
+}
+.pic-grid{
+  display: grid;
+  grid-template-columns: repeat(3 , 1fr);
+  width: 100%;
+}
+.grid-item{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.grid-item img{
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.grid-item:hover.grid-item img{
+  transform: scale(1.2);
+}
+.pic-grid-overlay{
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 22%;
+  color: white;
+  background-color: rgba(0,0,0,0.5);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.pic-grid-overlay h2{
+  margin-bottom: 25px;
+}
+.grid-item:hover .pic-grid-overlay{
+  visibility: visible;
+  opacity: 1;
+}
+.get{
+  margin: 120px 0 70px;
+}
+.get .container{
+  display: table;
+}
+.get .container .input{
+  display: table-cell;
+  padding: 40px;
+  width: 60%;
+}
+
+.get .container h1{
+  text-align: center;
+  font-weight: normal;
+  font-size: 26px;
+  margin-bottom: 25px;
+}
+.get .container .input p{
+  margin-bottom: 35px;
+}
+.get .container .input .input-item{
+  position: relative;
+  width: 47%;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.get .container .input .left{
+  width: auto;
+  display:block;
+  margin-right: 16px;
+
+}
+.get .container .input .right{
+  margin-right: 16px;
+  display: inline-block;
+}
+.get .container .input .input-item input{
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #999999;
+  box-shadow: none;
+  background-color: transparent;
+  padding-top: 3px;
+  font-size: 20px;
+  outline-offset: 0px;
+}
+label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font: 400 14px/115% 'Open Sans', sans-serif;
+  text-align: left;
+  color: #999999;
+  transition: top 0.2s ease-in-out;
+  z-index: -1;
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+.input-item input:focus{
+  outline: none;
+  border-bottom-color: #19af83;
+}
+.input-item input:focus ~ label{
+  top: -15px;
+  font: 400 12px/115% 'Open Sans', sans-serif;
+  color: #19af83;
+  transition: top 0.2s ease-in-out;
+}
+.full::before{
+  position: absolute;
+  content: "";
+  left: -1%;
+  width: 1px;
+  height: 80%;
+  background: #ccc;
+  top: 10%;
+}
+.full{
+  width: 40%;
+  height: 100%;
+  display: table-cell;
+  color: #333;
+  position: relative;
+  padding: 40px;
+}
+.full >p{
+  margin-bottom: 30px;
+}
+.full-item{
+  margin-bottom: 30px;
+}
+.full-item .c-icon{
+  display: inline-block;
+  margin-right: 15px;
+}
+.full-item .c-info{
+  width: 83%;
+  display: inline-block;
+  vertical-align: top;
+  color: #333;
+}
+.textarea{
+  width: 100%;
+  resize: vertical;
+  overflow: auto;
+  border: 0;
+  border-bottom: 1px solid #999999;
+  box-shadow: none;
+  background-color: transparent;
+  padding-top: 3px;
+  font-size: 20px;
+  outline-offset: 0px;
+  margin-bottom: 30px;
+}
+.textarea:focus{
+  outline: none;
+  border-bottom-color: #19af83;
+}
+.textarea:focus ~ label{
+  top: -15px;
+  font: 400 12px/115% 'Open Sans', sans-serif;
+  color: #19af83;
+  transition: top 0.2s ease-in-out;
+}
+.input > input{
+  margin: 0 0 0 235px;
+}
+.footer{
+  padding: 75px 0 50px;
+  background-color: #000;
+}
+.email{
+  text-align: center;
+  color: #fff;
+}
+.email p{
+  margin-bottom: 50px;
+}
+.email input[type="email"]{
+  width: 23%;
+  border: 0;
+  border-bottom: 1px solid #999999;
+  box-shadow: none;
+  background-color: transparent;
+  padding-top: 3px;
+  font-size: 20px;
+  outline-offset: 0px;
+  color: #fff;
+}
+.email-box{
+  position:relative;
+  z-index: 1;
+}
+.email-box label{
+  color: #fff;
+  left: 440px;
+}
+.email input:focus{
+  outline: none;
+  border-bottom-color: #19af83;
+}
+.email input:focus ~ label{
+  top: -15px;
+  font: 400 12px/115% 'Open Sans', sans-serif;
+  color: #19af83;
+  transition: top 0.2s ease-in-out;
+}
+.bag{
+  background: url(../images/email-box-arrow.png) no-repeat 0 1px;
+  padding: 0px 4px;
+  border: 0;
+  position: absolute;
+  top: 5px;
+  right: 448px;
+  cursor: pointer;
+  width: 20px
+}
+.row{
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+.row-left span{
+  color: #fff;
+}
+.row-left span:last-child{
+  font-size: 12px;
+}
+.row-left span:last-child span{
+  color: #19af83;
+}
+.row-right i{
+  color: #fff;
+  margin-right: 4px;
+  padding: 5px;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+}
+.row-right i:hover{
+  color: #19af83;
+}
+.front{
+  position: absolute;
+  top: 45%;
+  visibility: visible;
+  opacity: 1;
+  left: 35%;
+  transition: visibility 0.5s ease-in-out;
+}
+.back i{
+  color: #fff;
+    font-size: 25px;
+    position: relative;
+    left: -15px;
+    transition: all 0.3s;
+}
